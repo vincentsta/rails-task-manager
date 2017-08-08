@@ -9,15 +9,7 @@
     <div class="panel panel-default">
       <div class="panel-heading"><h3>
         <%= @task.name %>
-        <% if @task.done  %>
-          <span class="badge done">
-            <i class="fa fa-check" aria-hidden="true"></i>
-          </span>
-        <% else %>
-          <span class="badge notdone">
-            <i class="fa fa-times" aria-hidden="true"></i>
-          </span>
-        <% end %>
+        <%= render 'donechar' %>
       </h3></div>
       <div class="panel-body">
         <%= @task.description %>
